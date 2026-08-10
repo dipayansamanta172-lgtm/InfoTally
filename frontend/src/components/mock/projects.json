@@ -1,0 +1,30 @@
+[
+  {
+    "id": "project-1",
+    "name": "Attendance Semester 3",
+    "recordsCount": 128,
+    "lastUpdated": "Updated today",
+    "category": "attendance"
+  },
+  {
+    "id": "project-2",
+    "name": "Internal Marks",
+    "recordsCount": 116,
+    "lastUpdated": "Updated 2 days ago",
+    "category": "marks"
+  },
+  {
+    "id": "project-3",
+    "name": "Placement Registration",
+    "recordsCount": 210,
+    "lastUpdated": "Updated 5 days ago",
+    "category": "placements"
+  },
+  {
+    "id": "project-4",
+    "name": "Lab Records",
+    "recordsCount": 86,
+    "lastUpdated": "Updated 1 week ago",
+    "category": "labs"
+  }
+]

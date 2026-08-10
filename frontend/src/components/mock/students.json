@@ -1,0 +1,119 @@
+[
+  {
+    "id": "202400123",
+    "name": "Divyash Samanta",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "divyash@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400124",
+    "name": "Ananya Sharma",
+    "lastUpdated": "Updated today",
+    "isExpanded": true,
+    "fields": [
+      { "label": "Email", "value": "ananya@gmail.com" },
+      { "label": "Phone", "value": "+91 98765 43210" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ],
+    "extendedFields": [
+      { "label": "Latest Attendance", "value": "08 / 10" },
+      { "label": "Latest Internal Marks", "value": "26 / 30" },
+      { "label": "Latest Update", "value": "Today, 10:30 AM" }
+    ]
+  },
+  {
+    "id": "202400126",
+    "name": "Rohan Verma",
+    "lastUpdated": "Updated yesterday",
+    "fields": [
+      { "label": "Email", "value": "rohan@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400101",
+    "name": "Aaron Singh",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "aaron@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400102",
+    "name": "Alisha Nair",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "alisha@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400103",
+    "name": "Kabir Patel",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "kabir@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400104",
+    "name": "Ishika Roy",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "ishika@gmail.com" },
+      { "label": "Department", "value": "ECE" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400105",
+    "name": "Arjun Sen",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "arjun@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400106",
+    "name": "Sneha Kapoor",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "sneha@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400107",
+    "name": "Riya Malhotra",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "riya@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  },
+  {
+    "id": "202400108",
+    "name": "Pooja Iyer",
+    "lastUpdated": "Updated today",
+    "fields": [
+      { "label": "Email", "value": "pooja@gmail.com" },
+      { "label": "Department", "value": "CSE - AIML" },
+      { "label": "Semester", "value": "3" }
+    ]
+  }
+]

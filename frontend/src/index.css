@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth color transitions for all container and text elements when toggling light/dark mode */
+body, div, nav, header, footer, a, button, input, select, span, h1, h2, h3, h4, p {
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+  color: #0D0D0D;
+  overflow-x: hidden;
+}
+
+/* Configure default custom focus rings for a11y support */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #557373;
+  outline-offset: 2px;
+}

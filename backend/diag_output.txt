@@ -1,0 +1,399 @@
+﻿[diagnose] Using user id=2 email=yoboy.unknown.65@gmail.com
+
+========== HTTP STATUS ==========
+200
+
+========== RAW RESPONSE BODY ==========
+{
+  "success": true,
+  "report": {
+    "stage1_account": {
+      "upn": "",
+      "displayName": "N/A",
+      "accountType": "Work / School Account (Entra ID / AAD)",
+      "tenantId": "Unknown",
+      "meHttpStatus": 403
+    },
+    "stage2_forms_api_support": {
+      "endpointTried": "https://graph.microsoft.com/beta/me/forms",
+      "httpStatus": 400,
+      "errorCode": "BadRequest",
+      "supported": false
+    },
+    "stage3_endpoints": [
+      {
+        "label": "Beta /me/forms (personal Forms list)",
+        "url": "https://graph.microsoft.com/beta/me/forms",
+        "httpStatus": 400,
+        "ok": false,
+        "responseJSON": {
+          "error": {
+            "code": "BadRequest",
+            "message": "This API is not supported for MSA accounts (no addressUrl for Microsoft.Forms,False).",
+            "innerError": {
+              "date": "2026-08-03T17:21:31",
+              "request-id": "14776d62-4551-4448-93bd-2b766d43fef0",
+              "client-request-id": "14776d62-4551-4448-93bd-2b766d43fef0"
+            }
+          }
+        },
+        "verdict": "BAD REQUEST ΓÇö This API is not supported for MSA accounts (no addressUrl for Microsoft.Forms,False)."
+      },
+      {
+        "label": "Beta /me/forms?$top=1 (paged)",
+        "url": "https://graph.microsoft.com/beta/me/forms?$top=1",
+        "httpStatus": 400,
+        "ok": false,
+        "responseJSON": {
+          "error": {
+            "code": "BadRequest",
+            "message": "This API is not supported for MSA accounts (no addressUrl for Microsoft.Forms,False).",
+            "innerError": {
+              "date": "2026-08-03T17:21:31",
+              "request-id": "d8898ddd-5c5b-4314-8676-ebc796fc155c",
+              "client-request-id": "d8898ddd-5c5b-4314-8676-ebc796fc155c"
+            }
+          }
+        },
+        "verdict": "BAD REQUEST ΓÇö This API is not supported for MSA accounts (no addressUrl for Microsoft.Forms,False)."
+      },
+      {
+        "label": "Beta /me/insights/used (activity insights)",
+        "url": "https://graph.microsoft.com/beta/me/insights/used?$top=1",
+        "httpStatus": 401,
+        "ok": false,
+        "responseJSON": {
+          "error": {
+            "code": "UnknownError",
+            "message": "",
+            "innerError": {
+              "date": "2026-08-03T17:21:32",
+              "request-id": "ad48b413-0fec-494d-b8f6-116ba23b2575",
+              "client-request-id": "ad48b413-0fec-494d-b8f6-116ba23b2575"
+            }
+          }
+        },
+        "verdict": "UNEXPECTED HTTP 401 ΓÇö UnknownError"
+      },
+      {
+        "label": "v1.0 /me/drive (OneDrive root)",
+        "url": "https://graph.microsoft.com/v1.0/me/drive",
+        "httpStatus": 200,
+        "ok": true,
+        "responseJSON": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#drives/$entity",
+          "createdDateTime": "2026-08-03T02:09:32Z",
+          "description": "",
+          "id": "249947f7391ab7c6",
+          "lastModifiedDateTime": "2026-08-03T15:57:44Z",
+          "name": "OneDrive",
+          "webUrl": "https://my.microsoftpersonalcontent.com/personal/249947f7391ab7c6/Documents",
+          "driveType": "personal",
+          "createdBy": {
+            "user": {
+              "displayName": "System Account"
+            }
+          },
+          "lastModifiedBy": {
+            "user": {
+              "displayName": "System Account"
+            }
+          },
+          "owner": {
+            "user": {
+              "email": "rohitdas1921@outlook.com",
+              "displayName": "Rohit Das"
+            }
+          },
+          "quota": {
+            "deleted": 0,
+            "remaining": 5367544282,
+            "state": "normal",
+            "total": 5368709120,
+            "used": 1164838,
+            "storagePlanInformation": {
+              "upgradeAvailable": true
+            }
+          }
+        },
+        "verdict": "SUPPORTED"
+      },
+      {
+        "label": "v1.0 /me/drive/root/children (OneDrive files)",
+        "url": "https://graph.microsoft.com/v1.0/me/drive/root/children?$top=5",
+        "httpStatus": 200,
+        "ok": true,
+        "responseJSON": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('rohitdas1921%40outlook.com')/drive/root/children",
+          "@odata.nextLink": "https://graph.microsoft.com/v1.0/me/drive/root/children?$top=5&$skiptoken=UGFnZWQ9VFJVRSZwX1NvcnRCZWhhdmlvcj0wJnBfRmlsZUxlYWZSZWY9RW1wbG95ZWUrc2F0aXNmYWN0aW9uK3N1cnZleS54bHN4JnBfSUQ9NQ",
+          "value": [
+            {
+              "createdDateTime": "2026-08-03T15:52:43Z",
+              "eTag": "\"{578B529E-6A4B-4563-BCC8-EC3B3449E69F},1\"",
+              "id": "249947F7391AB7C6!s578b529e6a4b4563bcc8ec3b3449e69f",
+              "lastModifiedDateTime": "2026-08-03T15:52:43Z",
+              "name": "Attachments",
+              "webUrl": "https://onedrive.live.com?cid=249947f7391ab7c6&id=249947F7391AB7C6!s578b529e6a4b4563bcc8ec3b3449e69f",
+              "cTag": "\"c:{578B529E-6A4B-4563-BCC8-EC3B3449E69F},0\"",
+              "isAuthoritative": false,
+              "size": 0,
+              "createdBy": {
+                "application": {
+                  "id": "b3af06fc-dbcf-4a28-98b2-4624811440d8",
+                  "displayName": "i:0i.t|ms.sp.ext|b3af06fc-dbcf-4a28-98b2-4624811440d8@9188040d-6c67-4c5b-b112-36a304b66dad"
+                },
+                "user": {
+                  "email": "rohitdas1921@outlook.com",
+                  "id": "249947f7391ab7c6",
+                  "displayName": "Rohit Das"
+                }
+              },
+              "lastModifiedBy": {
+                "application": {
+                  "id": "b3af06fc-dbcf-4a28-98b2-4624811440d8",
+                  "displayName": "i:0i.t|ms.sp.ext|b3af06fc-dbcf-4a28-98b2-4624811440d8@9188040d-6c67-4c5b-b112-36a304b66dad"
+                },
+                "user": {
+                  "email": "rohitdas1921@outlook.com",
+                  "id": "249947f7391ab7c6",
+                  "displayName": "Rohit Das"
+                }
+              },
+              "parentReference": {
+                "driveType": "personal",
+                "driveId": "249947f7391ab7c6",
+                "id": "249947F7391AB7C6!sea8cc6beffdb43d7976fbc7da445c639",
+                "name": "Documents",
+                "path": "/drive/root:",
+                "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd"
+              },
+              "fileSystemInfo": {
+                "createdDateTime": "2026-08-03T15:52:43Z",
+                "lastModifiedDateTime": "2026-08-03T15:52:43Z"
+              },
+              "folder": {
+                "childCount": 0,
+                "view": {
+                  "sortBy": "name",
+                  "sortOrder": "ascending",
+                  "viewType": "thumbnails"
+                }
+              },
+              "specialFolder": {
+                "name": "attachments"
+              }
+            },
+            {
+              "createdDateTime": "2026-08-03T15:51:54Z",
+              "eTag": "\"{CCD0DD3C-2907-4166-8E52-30A1FD2B9DC3},1\"",
+              "id": "249947F7391AB7C6!sccd0dd3c290741668e5230a1fd2b9dc3",
+              "lastModifiedDateTime": "2026-08-03T15:51:54Z",
+              "name": "Documents",
+              "webUrl": "https://onedrive.live.com?cid=249947f7391ab7c6&id=249947F7391AB7C6!sccd0dd3c290741668e5230a1fd2b9dc3",
+              "cTag": "\"c:{CCD0DD3C-2907-4166-8E52-30A1FD2B9DC3},0\"",
+              "isAuthoritative": false,
+              "size": 0,
+              "createdBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "lastModifiedBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "parentReference": {
+                "driveType": "personal",
+                "driveId": "249947f7391ab7c6",
+                "id": "249947F7391AB7C6!sea8cc6beffdb43d7976fbc7da445c639",
+                "name": "Documents",
+                "path": "/drive/root:",
+                "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd"
+              },
+              "fileSystemInfo": {
+                "createdDateTime": "2026-08-03T15:51:54Z",
+                "lastModifiedDateTime": "2026-08-03T15:51:54Z"
+              },
+              "folder": {
+                "childCount": 0,
+                "view": {
+                  "sortBy": "name",
+                  "sortOrder": "ascending",
+                  "viewType": "thumbnails"
+                }
+              },
+              "specialFolder": {
+                "name": "documents"
+              }
+            },
+            {
+              "createdDateTime": "2026-08-03T15:51:54Z",
+              "eTag": "\"{1C997A58-A718-4258-838D-6C769AFD2838},1\"",
+              "id": "249947F7391AB7C6!s1c997a58a7184258838d6c769afd2838",
+              "lastModifiedDateTime": "2026-08-03T15:51:54Z",
+              "name": "Personal Vault",
+              "cTag": "\"c:{1C997A58-A718-4258-838D-6C769AFD2838},1\"",
+              "isAuthoritative": false,
+              "size": 0,
+              "createdBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "lastModifiedBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "parentReference": {
+                "driveType": "personal",
+                "driveId": "249947f7391ab7c6",
+                "id": "249947F7391AB7C6!sea8cc6beffdb43d7976fbc7da445c639",
+                "name": "Documents",
+                "path": "/drive/root:",
+                "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd"
+              },
+              "fileSystemInfo": {
+                "createdDateTime": "2026-08-03T15:51:54Z",
+                "lastModifiedDateTime": "2026-08-03T15:51:54Z"
+              },
+              "remoteItem": {
+                "id": "01RFII7FF6Y2GOVW7725BZO354PWSELRRZ",
+                "size": 0,
+                "folder": {
+                  "childCount": 0
+                },
+                "parentReference": {
+                  "driveType": "personal",
+                  "driveId": "b!ywMBtbOOokqVvN3CPZfi3VqGimdFtVFJu5b_C3kIic-Bi2vwedJmQJIE2zvnDrei"
+                },
+                "sharepointIds": {
+                  "listId": "f06b8b81-d279-4066-9204-db3be70eb7a2",
+                  "listItemUniqueId": "467c8bd9-ff83-4ce5-bee9-b0445d051734",
+                  "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd",
+                  "siteUrl": "https://my.microsoftpersonalcontent.com/personal/249947f7391ab7c6",
+                  "webId": "678a865a-b545-4951-bb96-ff0b790889cf"
+                }
+              }
+            },
+            {
+              "createdDateTime": "2026-08-03T15:51:56Z",
+              "eTag": "\"{F704DDE6-0AFE-4EAB-AEA6-B97EB6CE6B37},1\"",
+              "id": "249947F7391AB7C6!sf704dde60afe4eabaea6b97eb6ce6b37",
+              "lastModifiedDateTime": "2026-08-03T15:51:56Z",
+              "name": "Pictures",
+              "webUrl": "https://onedrive.live.com?cid=249947f7391ab7c6&id=249947F7391AB7C6!sf704dde60afe4eabaea6b97eb6ce6b37",
+              "cTag": "\"c:{F704DDE6-0AFE-4EAB-AEA6-B97EB6CE6B37},0\"",
+              "isAuthoritative": false,
+              "size": 0,
+              "createdBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "lastModifiedBy": {
+                "user": {
+                  "displayName": "System Account"
+                }
+              },
+              "parentReference": {
+                "driveType": "personal",
+                "driveId": "249947f7391ab7c6",
+                "id": "249947F7391AB7C6!sea8cc6beffdb43d7976fbc7da445c639",
+                "name": "Documents",
+                "path": "/drive/root:",
+                "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd"
+              },
+              "fileSystemInfo": {
+                "createdDateTime": "2026-08-03T15:51:56Z",
+                "lastModifiedDateTime": "2026-08-03T15:51:56Z"
+              },
+              "folder": {
+                "childCount": 0,
+                "view": {
+                  "sortBy": "name",
+                  "sortOrder": "ascending",
+                  "viewType": "thumbnails"
+                }
+              },
+              "specialFolder": {
+                "name": "photos"
+              }
+            },
+            {
+              "@microsoft.graph.downloadUrl": "https://my.microsoftpersonalcontent.com/personal/249947f7391ab7c6/_layouts/15/download.aspx?UniqueId=ad2d24b6-88a7-4a81-9b71-1c482aabce81&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiJiNTAxMDNjYi04ZWIzLTRhYTItOTViYy1kZGMyM2Q5N2UyZGQiLCJhcHBfZGlzcGxheW5hbWUiOiJJbmZvVGFsbHkiLCJhcHBpZCI6IjA2MzMxNzcwLWM5MWEtNGFjNC04MDY0LTMyNWU5OTVlMWViOCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3ODU3ODEyOTQifQ.-l_7G8OfDtYkItIuxg5dCi23BTceslePLWOToR3xGyAAHQffWBBKB_D9TXhjeIJ2kVAcJYWUDGgX5qwIFHwrFHMFx9prGldzTXtrb31_CverJofoCEUFd5dhUZGSQ7miaO3m5OvkO0F0kFNfA0QPOs7yzcrZUII19GatAEPXFhdErQZkTvVi58xbjmYxXWRZD0GNDAF2rMROFJJ673cztrqnSe0Vy5MIsvg3bhFo4wqOyXAsFnKYIBaTe_veM2-TglO1Kkyb0tb7TeJz0ZK4fdfx3z8WP__NHQ_BBQ92B-aISw4wu_wGQzBjVW42kC1TtRFzvReJn_6hvPKypVVGO9sKF-vWffafSMnixiSjEZtEMYrSSPPYJiyMFfdPNZelQ_XtFc19Ol6_XARx1hBwZVf9mRU8oknJU4qmxpxUHJNEocNfZYqrzsjnj7daAryGsM6h3w7j_ZhHZ7vWH0JhzlLzBjJamuBC1tl_BiuR9GM.PDCkBp12Uno52k2PbW08OMPzb02TMKm158DJwU3VkAg&ApiVersion=2.0",
+              "createdDateTime": "2026-08-03T15:52:01Z",
+              "eTag": "\"{AD2D24B6-88A7-4A81-9B71-1C482AABCE81},4\"",
+              "id": "249947F7391AB7C6!sad2d24b688a74a819b711c482aabce81",
+              "lastModifiedDateTime": "2026-08-03T16:37:54Z",
+              "name": "Employee satisfaction survey.xlsx",
+              "webUrl": "https://onedrive.live.com/personal/249947f7391ab7c6/_layouts/15/doc.aspx?resid=ad2d24b6-88a7-4a81-9b71-1c482aabce81&cid=249947f7391ab7c6",
+              "cTag": "\"c:{AD2D24B6-88A7-4A81-9B71-1C482AABCE81},3\"",
+              "isAuthoritative": false,
+              "size": 11907,
+              "createdBy": {
+                "application": {
+                  "id": "c9a559d2-7aab-4f13-a6ed-e7e9c52aec87",
+                  "displayName": "Microsoft Forms"
+                },
+                "user": {
+                  "email": "rohitdas1921@outlook.com",
+                  "id": "249947f7391ab7c6",
+                  "displayName": "Rohit Das"
+                }
+              },
+              "lastModifiedBy": {
+                "user": {
+                  "email": "rohitdas1921@outlook.com",
+                  "id": "249947f7391ab7c6",
+                  "displayName": "Rohit Das"
+                }
+              },
+              "parentReference": {
+                "driveType": "personal",
+                "driveId": "249947f7391ab7c6",
+                "id": "249947F7391AB7C6!sea8cc6beffdb43d7976fbc7da445c639",
+                "name": "Documents",
+                "path": "/drive/root:",
+                "siteId": "b50103cb-8eb3-4aa2-95bc-ddc23d97e2dd"
+              },
+              "file": {
+                "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "hashes": {
+                  "quickXorHash": "rhCj287QJgSuNMhYOV6T9GX4fQ8=",
+                  "sha1Hash": "987EB0C3D8B43D6BE1631E5922D3BB26C5D6E4F0",
+                  "sha256Hash": "6963EBD7D15F4751066EC2A0BA3F4E3A9D6CBBD1B7E5DED5FE42C9107EC8CFF9"
+                }
+              },
+              "fileSystemInfo": {
+                "createdDateTime": "2026-08-03T15:52:01Z",
+                "lastModifiedDateTime": "2026-08-03T16:37:54Z"
+              },
+              "shared": {
+                "scope": "users",
+                "owner": {
+                  "user": {
+                    "email": "rohitdas1921@outlook.com",
+                    "id": "249947f7391ab7c6",
+                    "displayName": "Rohit Das"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "verdict": "SUPPORTED"
+      }
+    ],
+    "stage4_conclusion": {
+      "formsApiSupported": false,
+      "accountType": "Work / School Account (Entra ID / AAD)",
+      "conclusion": "Microsoft Forms API is NOT supported for this account type.",
+      "failureReason": "The Forms endpoint returned an unexpected error for this account.",
+      "recommendation": "Check the Azure app registration and ensure the account has Microsoft 365 Forms licencing.",
+      "existingExcelWorkflowModified": false,
+      "noCodeChangedByThisEndpoint": true
+    }
+  }
+}
